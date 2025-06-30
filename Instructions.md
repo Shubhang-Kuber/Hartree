@@ -120,6 +120,8 @@ Program your Arduino to control the automatic lighting system.
 
 3. **Upload the Control Code:**
 
+---
+
 ### **Part 7: Power On and Operation!**
 
 1. Disconnect USB: Remove the USB cable from the Arduino.I
@@ -134,6 +136,8 @@ Program your Arduino to control the automatic lighting system.
 3. Monitor the System:
 - Watch the storage capacitor voltage if you have a multimeter
 - You should see voltage gradually building up to around 5V
+
+---
 
   ### **What to Expect:**
 1. Initial Charging Phase:
