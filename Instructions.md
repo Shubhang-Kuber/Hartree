@@ -119,3 +119,44 @@ Program your Arduino to control the automatic lighting system.
   - Go to **Tools → Port** and select your Arduino's port
 
 3. **Upload the Control Code:**
+
+### **Part 7: Power On and Operation!**
+
+1. Disconnect USB: Remove the USB cable from the Arduino.I
+- It will now run on harvested energy.
+- Start Energy Harvesting.
+
+3. Position your piezoelectric discs near a sound source (music, conversation, ambient noise)
+- Allow several minutes for energy to accumulate in your storage capacitor
+- The system needs time to build up enough charge to operate
+
+
+3. Monitor the System:
+- Watch the storage capacitor voltage if you have a multimeter
+- You should see voltage gradually building up to around 5V
+
+  ### **What to Expect:**
+1. Initial Charging Phase:
+- The system will take 5-15 minutes to accumulate enough energy to start operating
+- During this time, the Arduino may not have enough power to run consistently
+
+
+2. Automatic Operation:
+
+- Once sufficient energy is stored, the Arduino will begin monitoring light levels every second
+- In bright conditions: The bulb remains OFF, conserving harvested energy
+- In dark conditions: The relay clicks and the bulb turns ON automatically
+
+
+3. Energy Management:
+
+- The system will only operate when there's enough harvested energy
+- If energy runs low, the Arduino may stop functioning until more energy is collected
+- Continuous sound/vibration input will keep the system running longer
+
+
+4. Testing the System:
+
+-Cover the LDR sensor with your hand to simulate darkness - the bulb should turn on
+- Uncover the LDR sensor - the bulb should turn off after about 1 second
+- The relay will make a clicking sound each time it switches
