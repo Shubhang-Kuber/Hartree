@@ -1,0 +1,37 @@
+const int ldrPin = A0;       // LDR connected to analog pin A0
+const int ledPin1 = 9;        //  LED's connected to digital pin 9,10,11,12
+const int ledPin2 = 10; 
+const int ledPin3 = 11;
+const int ledPin4 = 12;
+const int threshold = 800;   // Adjust based on ambient light
+
+void setup() {
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  Serial.begin(9600);        // For debugging: view light level
+}
+
+void loop() {
+  int lightValue = analogRead(ldrPin);
+  Serial.print("LDR Value: ");
+  Serial.println(lightValue);
+
+  if (lightValue > threshold) {
+    // It's dark — turn LED ON
+    digitalWrite(ledPin1, HIGH);
+    digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledPin3, HIGH);
+    digitalWrite(ledPin4, HIGH);
+  } else {
+    // It's bright — turn LED OFF
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, LOW);
+    digitalWrite(ledPin3, LOW);
+    digitalWrite(ledPin4, LOW);
+    
+  }
+
+   // Small delay to reduce serial monitor spam
+}
