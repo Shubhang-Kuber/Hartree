@@ -3,7 +3,7 @@ const int ledPin1 = 9;        //  LED's connected to digital pin 9,10,11,12
 const int ledPin2 = 10; 
 const int ledPin3 = 11;
 const int ledPin4 = 12;
-const int threshold = 800;   // Adjust based on ambient light
+const int threshold = 950;   // Adjust based on ambient light
 
 void setup() {
   pinMode(ledPin1, OUTPUT);
@@ -19,14 +19,16 @@ void loop() {
   Serial.println(lightValue);
 
   if (lightValue > threshold) {
+    Serial.println("Dark Environment");
     // It's dark — turn LED ON
     digitalWrite(ledPin1, HIGH);
     digitalWrite(ledPin2, HIGH);
     digitalWrite(ledPin3, HIGH);
     digitalWrite(ledPin4, HIGH);
   } else {
+    Serial.println("Bright Environment");
     // It's bright — turn LED OFF
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin1, LOW);
     digitalWrite(ledPin2, LOW);
     digitalWrite(ledPin3, LOW);
     digitalWrite(ledPin4, LOW);
